@@ -42,6 +42,16 @@ public class ArraysAndStrings {
         return true;
     }
 
+    public static String reverseCStringStringBuilder(String str) {
+        StringBuilder sb = new StringBuilder();
+
+        for(int i = str.length() - 2; i > -1; i--) {
+            sb.append(str.charAt(i));
+        }
+        sb.append(str.charAt(str.length()-1));
+        return sb.toString();
+    }
+
     public static void testUniqueString() {
         System.out.println(uniqueStringSets("Moreland") == true);
         System.out.println(uniqueStringSets("Berkeley") == false);
@@ -49,6 +59,8 @@ public class ArraysAndStrings {
         System.out.println(uniqueStringArray("Berkeley") == false);
         System.out.println(uniqueStringBits("Moreland") == true);
         System.out.println(uniqueStringBits("Berkeley") == false);
+        System.out.println("--");
+        System.out.println(reverseCStringStringBuilder("Berkeley$"));
     }
 
     public static void main(String[] args) {
